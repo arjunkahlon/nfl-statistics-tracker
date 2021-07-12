@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% if object %}
+
+
+<h2>Here is a news story!</h2>
+<ul>
+    <li><strong>Title: </strong>{{object.Title}}</li>
+    <li><strong>Content: </strong>{{object.Content}}</li>
+</ul>
+
+
+{% else %}
+<h2>Error: No data found</h2>
+{% endif %}
+
+{% endblock %}

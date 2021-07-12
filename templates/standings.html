@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2> NFL 2019 Regular Season Standings</h2>
+
+<table id="standings_table" class="sortableTable">
+	<thead>
+		<tr>
+			<th><strong>Team</strong></th>
+			<th><strong>Conference</strong></th>
+			<th><strong>Divison</strong></th>
+			<th><strong>Wins</strong></th>
+			<th><strong>Losses</strong></th>
+			<th><strong>Ties</strong></th>
+			<th><strong>Percentage</strong></th>
+		</tr>
+	</thead>
+	<tbody>
+		{% set sort_on = request.args.sort_on|default('name') %}
+		{% for i in range (0, 32)|sort(attribute=sort_on)  %}
+		<tr>
+			<td>{{object[i].Name}}</td>
+			<td>{{object[i].Conference}}</td>
+			<td>{{object[i].Division}}</td>
+			<td>{{object[i].Wins}}</td>
+			<td>{{object[i].Losses}}</td>
+			<td>{{object[i].Ties}}</td>
+			<td>{{object[i].Percentage}}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+
+
+{% endblock %}

@@ -1,0 +1,6 @@
+service.log
+worker.log
+config.py
+__pycache__/
+nohup.out
+venv/

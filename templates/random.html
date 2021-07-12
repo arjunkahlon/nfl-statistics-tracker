@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% if object %}
+
+{% if object.Name %}
+<h2>Here is a random player for your random trivia!</h2>
+<ul>
+    <li><strong>Name: </strong>{{object.Name}}</li>
+    <li><strong>Current Team: </strong>{{object.CurrentTeam}}</li>
+    <li><strong>Position: </strong>{{object.Position}}</li>
+    <li><strong>Age: </strong>{{object.Age}}</li>
+    <li><strong>Status: </strong>{{object.Status}}</li>
+    <li><strong>Height: </strong>{{object.Height}}</li>
+    <li><strong>Weight: </strong>{{object.Weight}}</li>
+    <li><strong>Birth Date: </strong>{{object.BirthDate}}</li>
+</ul>
+{% else %}
+<h2>Here is a random game for your random trivia!</h2>
+<ul>
+    <li><strong>Season: </strong>{{object.Season}}</li>
+    <li><strong>Season Type: </strong>{{object.SeasonType}}</li>
+    <li><strong>Week: </strong>{{object.Week}}</li>
+    <li><strong>Date: </strong>{{object.Date}}</li>
+    <li><strong>Time: </strong>{{object.Time}}</li>
+    <li><strong>Away Team: </strong>{{object.AwayTeam}}</li>
+    <li><strong>Home Team: </strong>{{object.HomeTeam}}</li>
+    <li><strong>Away Score: </strong>{{object.AwayScore}}</li>
+    <li><strong>Home Score: </strong>{{object.HomeScore}}</li>
+</ul>
+{% endif %}
+
+{% else %}
+<h2>Error: No data found</h2>
+{% endif %}
+
+{% endblock %}

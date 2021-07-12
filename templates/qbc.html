@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% if objects %}
+<table cellpadding="10">
+    <tr align = left>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Passing Completion %</th>
+    </tr>
+    {% for i in range(0, len) %}
+    <tr>
+        <td>{{i+1}}</td>
+        <td>{{objects[i]["name"]}}</td>
+        <td>{{objects[i]["value"]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% else %}
+<h2>Error: No data found</h2>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% if offensive %}
+
+<h2>Total YPG Leaders:</h2>
+<ul>
+    {% for team in offensive %}
+    <li><strong>{{team.name}}: </strong>{{team.value}}</li>
+    {% endfor %}
+</ul>
+
+<h2>Passing YPG Leaders:</h2>
+<ul>
+    {% for team in passing %}
+    <li><strong>{{team.name}}: </strong>{{team.value}}</li>
+    {% endfor %}
+</ul>
+
+<h2>Rushing YPG Leaders:</h2>
+<ul>
+    {% for team in rushing %}
+    <li><strong>{{team.name}}: </strong>{{team.value}}</li>
+    {% endfor %}
+</ul>
+
+{% else %}
+<h2>Error: No data found</h2>
+{% endif %}
+
+{% endblock %}

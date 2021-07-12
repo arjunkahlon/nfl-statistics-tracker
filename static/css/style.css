@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+body, html {
+    font-family: 'Montserrat';
+}
+
+body {
+    margin: 30px;
+}
+
+.header {
+    color: lightgray;
+}
+
+.nav {
+	overflow: auto;
+	white-space: nowrap;
+    background-color: #efefef;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav a:hover {
+    background-color: lightgray;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px;
+    font-size: 22px;
+}
+
+p {
+    margin: 0 20px 10px;
+    padding: 10px;
+    max-width: 768px;
+    font-size: 16px;
+}
+
+form {
+    margin: 10px 30px;
+    font-size: 16px;
+}
+
+.teams {
+    font-family: 'Montserrat';
+}
+
+button {
+    border: none;
+    background: lightgray;
+    border-radius: 8px;
+    font-family: 'Montserrat';
+    font-size: 0.8em;
+}
+
+h2 {
+    margin: 0 30px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+textarea {
+    width: 50%;
+    height: 200pt;
+    overflow-y: scroll;
+}
+
+li {
+    font-size: 16px;
+    max-width: 768px;
+}
+
+a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+h3 {
+    margin: auto;
+    padding: 20px;
+    font-size: 18px;
+}
