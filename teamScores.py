@@ -49,7 +49,7 @@ def getWeek(game):
 
 
 def getWeekScore(name):
-    req = requests.get('https://api.sportsdata.io/v3/nfl/scores/json/Scores/2019',headers = headers)
+    req = requests.get('https://api.sportsdata.io/v3/nfl/scores/json/Scores/2021',headers = headers)
     scores = json.loads(req.text)
     week_score = []
     curr_team = name
@@ -57,8 +57,8 @@ def getWeekScore(name):
         if ((scores[item]["AwayTeam"] == curr_team) or (scores[item]["HomeTeam"] == curr_team)):
             week_score.append(scores[item])
     obj = {"tName":name, "week1":"N/A", "week2":"N/A", "week3":"N/A", "week4":"N/A", "week5":"N/A",
-    "week6":"N/A", "week7":"N/A", "week8":"N/A", "week9":"N/A", "week10":"N/A", "Week11":"N/A",
-    "week12":"N/A", "week13":"N/A", "week14":"N/A", "week15":"N/A", "Week16":"N/A"}
+            "week6":"N/A", "week7":"N/A", "week8":"N/A", "week9":"N/A", "week10":"N/A", "Week11":"N/A",
+    "week12":"N/A", "week13":"N/A", "week14":"N/A", "week15":"N/A", "Week16":"N/A", "Week17":"N/A"}
     if(curr_team != None):
         obj["tName"] = teamAbbrev[name]
         obj["week1"] = getWeek(week_score[0])
@@ -77,4 +77,5 @@ def getWeekScore(name):
         obj["week14"] = getWeek(week_score[13])
         obj["week15"] = getWeek(week_score[14])
         obj["week16"] = getWeek(week_score[15])
+        obj["week17"] = getWeek(week_score[16])
     return obj

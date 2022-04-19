@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, TextField, SubmitField, SelectField
+from wtforms import StringField, SubmitField, SelectField
 from wtforms.validators import DataRequired
 
 teamChoices = [('ARI', 'Arizona Cardinals'), 
@@ -20,20 +20,20 @@ teamChoices = [('ARI', 'Arizona Cardinals'),
                 ('KC', 'Kansas City Chiefs'),
                 ('LAC', 'Los Angeles Chargers'),
                 ('LAR', 'Los Angeles Rams'),
+                ('LV', 'Las Vegas Raiders'),
                 ('MIA', 'Miami Dolphins'),
                 ('MIN', 'Minnesota Vikings'),
                 ('NE', 'New England Patriots'),
                 ('NO', 'New Orleans Saints'),
                 ('NYG', 'New York Giants'),
                 ('NYJ', 'New York Jets'),
-                ('OAK', 'Oakland Raiders'),
                 ('PHI', 'Philadelphia Eagles'),
                 ('PIT', 'Pittsburgh Steelers'),
                 ('SF', 'San Francisco 49ers'),
                 ('SEA', 'Seattle Seahawks'),
                 ('TB', 'Tampa Bay Buccaneers'),
                 ('TEN', 'Tennessee Titans'),
-                ('WAS', 'Washington Redskins')]
+                ('WAS', 'Washington Commanders')]
 
 # team schedule search form
 class TeamForm(FlaskForm):

@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "NFL Worker",
+            "type": "python",
+            "request": "launch",
+            "program": "${fileDirname}/../worker.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "NFL Main",
+            "type": "python",
+            "request": "launch",
+            "program": "${fileDirname}/../nflstats.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}

@@ -26,7 +26,7 @@ def getTeamSchedule(name):
     curr_team = name
     obj = {"tName":name, "week1":"N/A", "week2":"N/A", "week3":"N/A", "week4":"N/A", "week5":"N/A", "week6":"N/A", "week7":"N/A", "week8":"N/A",
             "week9":"N/A", "week10":"N/A", "Week11":"N/A", "week12":"N/A", "week13":"N/A", "week14":"N/A", "week15":"N/A", "Week16":"N/A", "week17":"N/A"}
-    req = requests.get('https://api.sportsdata.io/v3/nfl/scores/json/Schedules/2019',headers = headers)
+    req = requests.get('https://api.sportsdata.io/v3/nfl/scores/json/Schedules/2021',headers = headers)
     teams = json.loads(req.text)
     team_schedule = []
     for item in range (0, len(teams)):                  # this loop will put 17 items in the team_schedule array
@@ -55,5 +55,6 @@ def getTeamSchedule(name):
         obj["week15"] = populateObj(team_schedule[14])
         obj["week16"] = populateObj(team_schedule[15])
         obj["week17"] = populateObj(team_schedule[16])
+        obj["week18"] = populateObj(team_schedule[17])
 
     return obj

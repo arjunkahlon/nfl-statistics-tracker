@@ -68,7 +68,7 @@ def getScore(year, seasonType):
 # function to try to get scores from various years and seasons
 def getAllScoreFrom(startYear):
 	currentYear = datetime.datetime.now().year			# get the current year
-	while (startYear <= currentYear):					# loop until greater than current year
+	while (startYear < currentYear):					# loop until greater than current year
 		getScore(str(startYear), "")
 		getScore(str(startYear), "PRE")
 		getScore(str(startYear), "POST")
@@ -141,7 +141,7 @@ def postData(key, route, obj):
 	logging.info("Post API call from worker started for " + key)
 	try:
 		connectionAttempts += 1							# increment total numbef of API calls in this cycle
-		req = requests.post("http://flip3.engr.oregonstate.edu:" + str(PORT) + "/" + route, json.dumps(payload))
+		req = requests.post("http://127.0.0.1:" + str(PORT) + "/" + route, json.dumps(payload))
 		if (req.status_code == 200):
 			print("Post API call from worker succeeded")
 			logging.info("Post API call from worker succeeded")
@@ -163,9 +163,9 @@ while (1):
 	logging.info(timeNow)
 
 	getPlayers()						# get players
-	getAllScoreFrom(2018)				# get scores
-	getTeamStats(2018)					# get team stats
-	getPlayerRank(2018)
+	getAllScoreFrom(2019)				# get scores
+	getTeamStats(2019)					# get team stats
+	getPlayerRank(2019)
 	
 	if (connectionError == 0):			# no connection errors in this cycle
 		sleepTimeInSeconds = 3600		# sleep longer

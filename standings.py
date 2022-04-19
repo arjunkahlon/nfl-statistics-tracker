@@ -23,9 +23,9 @@ headers = {"ocp-apim-subscription-key": API_KEY}		# header info for the API call
 
 
 
-# function to get standings (2019 regular season)
+# function to get standings (2021 regular season)
 def standingsReq():
-	req = requests.get("https://api.sportsdata.io/v3/nfl/scores/json/Standings/2019REG", headers=headers)
+	req = requests.get("https://api.sportsdata.io/v3/nfl/scores/json/Standings/2021REG", headers=headers)
 	if (req.status_code == 200):
 		print("Standings API call succeeded.")
 		cache["standings"] = json.loads(req.text)
