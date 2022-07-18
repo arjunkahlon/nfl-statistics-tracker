@@ -1,13 +1,5 @@
 # NFL-Stats
 
-**CS 361 Winter 2020 - Team 1**
-  - Jennifer Banks
-  - Arjun Kahlon
-  - Cameron Jones
-  - Corbin Tegner
-  - Kevin Wu
-  - Roman Guerrero
-
 **1. Commands to run to prepare for your server**
   - Start bash
 ```
